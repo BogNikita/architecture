@@ -1,10 +1,11 @@
 import React from 'react';
 import { FieldPrimary } from '../../../../lib/elements/field';
 import { FieldLayout } from '../../../../lib/elements/layout';
+import { FormLoader, FormError } from '../../../../lib/elements/form';
 
 import styled from 'styled-components';
-import { Button } from '../../../../lib/elements/buttons/buttonSignup';
-import { THEME_COLOR } from '../../../../lib/theme';
+import { ButtonPrimary } from '../../../../lib/elements/button/';
+import { spacing } from '../../../../lib/theme';
 
 export function SignUpComponent(props) {
   const {
@@ -53,20 +54,16 @@ export function SignUpComponent(props) {
             error={isFieldError(fieldPassword)}
           />
         </FieldLayout>
-        <StyledButton type="submit" disabled={isSubmitDisabled()}>
-          Создать аккаунт
-        </StyledButton>
-        {isPending && 'Loading...'}
-        {isError && errorMessage}
+        <ButtonPrimary tId="SIGNUP.SIGNUP_FORM.BUTTON.TITLE" type="submit" disabled={isSubmitDisabled()}/>
+        {isPending && <FormLoader/>}
+        {isError && <FormError errotTid={errorMessage}/>}
       </Container>
     </form>
   );
 }
 const Container = styled.div`
   display: grid;
-  grid-gap: 16px;
+  grid-gap: ${spacing(4)};
 `;
 
-const StyledButton = styled(Button)`
-  background: ${THEME_COLOR.BACKGROUND_BUTTON};
-`;
+

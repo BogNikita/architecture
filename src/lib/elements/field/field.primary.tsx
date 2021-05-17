@@ -37,9 +37,9 @@ const Title = styled(TextSecondary)`
 `;
 
 const Input = styled.input`
- background: ${THEME_COLOR.BACKGROUND_INPUT};
- border-radius: 5px;
- padding: 5px 10px
+ background: ${THEME_COLOR.BACKGROUND.INPUT};
+ border-radius: ${spacing(1.25)};
+ padding: ${spacing(1.25)} ${spacing(3.75)}
 `;
 
 const Container = styled.div`
@@ -50,4 +50,5 @@ const Container = styled.div`
 const ErrorMessage = styled.span`
   color: red;
   font-size: ${THEME_SIZE.FONT.SMALL};
+  padding: ${spacing(1.25)}
 `;
