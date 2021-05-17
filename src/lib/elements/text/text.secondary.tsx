@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { TextSecondaryPropsType } from './text.type';
 
 import { text } from '../../common/text';
 
@@ -9,6 +10,6 @@ const Text = styled.span`
   color: ${THEME_COLOR.TEXT_SECONDARY};
 `;
 
-export function TextSecondary(props) {
+export function TextSecondary(props: TextSecondaryPropsType) {
   return <Text className={props.className}>{text(props.tid, props.value)}</Text>;
 }

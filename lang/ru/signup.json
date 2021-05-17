@@ -9,6 +9,9 @@
                 "TITLE": "Password",
                 "PLACEHOLDER": "Your password"
             }
+        },
+        "BUTTON" : {
+            "TITLE": "Создать аккаунт"
         }
     }
 }
