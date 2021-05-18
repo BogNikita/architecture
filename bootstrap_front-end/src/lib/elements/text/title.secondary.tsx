@@ -9,8 +9,9 @@ const Title = styled.span`
   font-size: ${THEME_SIZE.FONT.TITLE};
   color: ${THEME_COLOR.TEXT_BLACK};
   display: block;
-  margin: ${spacing(2.5)} 0
-`;
+  margin: ${spacing(2.5)} 0;
+  font-weight: bold;
+  `
 
 export function TitleSecondary(props: TextSecondaryPropsType) {
   return <Title className={props.className}>{text(props.tid, props.value)}</Title>;
