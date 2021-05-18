@@ -4,6 +4,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { USERLIST_STORE_NAME } from './userlist.constants';
 import { NAVIGATION_STORE_NAME } from '../../lib/common/navigation';
 import { UserlistComponent } from './userlist.component';
+import {
+  isRequestPending,
+  isRequestError,
+  isRequestSuccess,
+  getRequestData,
+} from '../../main/store/store.service';
 
 export function UserlistContainer() {
   const dispatch = useDispatch();
@@ -16,6 +22,14 @@ export function UserlistContainer() {
   useEffect(() => {
     dispatch(userlistUploadData());
   }, []);
-
-  return <UserlistComponent state={state} pageLoading={pageLoading}/>;
+  return (
+    <UserlistComponent
+      isPending={isRequestPending(state.userItem)}
+      isError={isRequestError(state.userItem)}
+      isSuccess={isRequestSuccess(state.userItem)}
+      userItem={getRequestData(state.userItem)}
+      errorMessage={state.userItem.errorMessage}
+      pageLoading={pageLoading}
+    />
+  );
 }

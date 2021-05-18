@@ -1,11 +1,13 @@
 export const THEME_COLOR = {
   PRIMARY: '#fff',
-
-  TEXT_SECONDARY: '#707070',
-
+  
   ERROR: '#e76d6d',
 
-  TEXT_BLACK: '#252525',
+  TEXT: {
+    PRIMARY: '#252525',
+    SECONDARY: '#707070',
+    ERROR: '#e76d6d'
+  },
 
   BACKGROUND: {
     INPUT: '#f3f3f3',
