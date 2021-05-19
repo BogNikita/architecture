@@ -9,6 +9,7 @@ import {
   isRequestError,
   isRequestSuccess,
   getRequestData,
+  getRequestErrorMessage
 } from '../../main/store/store.service';
 
 export function UserlistContainer() {
@@ -28,7 +29,7 @@ export function UserlistContainer() {
       isError={isRequestError(state.userItem)}
       isSuccess={isRequestSuccess(state.userItem)}
       userItem={getRequestData(state.userItem)}
-      errorMessage={state.userItem.errorMessage}
+      errorMessage={getRequestErrorMessage(state.userItem)}
       pageLoading={pageLoading}
     />
   );

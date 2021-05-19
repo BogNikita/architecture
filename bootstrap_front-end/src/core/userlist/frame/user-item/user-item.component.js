@@ -1,12 +1,7 @@
-import { FormLoader, FormError } from '../../../../lib/elements/form';
-import { UserlistLayout } from '../../../../lib/elements/layout';
+import { UserItemPrimary } from '../../../../lib/elements/useritem';
 
-export function UserItemComponent(props) {
-  const { isPending, isError, isSuccess, userList, pageLoading, errorMessage } = props;
-  return (
-    <UserlistLayout>
-      {isPending || (pageLoading && isSuccess) ? <FormLoader /> : userList()}
-      {isError && <FormError errotTid={errorMessage} />}
-    </UserlistLayout>
-  );
+export function UserItemComponent({userItem}) {
+  return userItem?.map((user, i) => (
+    <UserItemPrimary key={`${user.id}_${i}`} id={user.id} login={user.login} />
+  ));
 }
