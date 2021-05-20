@@ -1,4 +1,5 @@
 export interface UserItemPropsType {
     id: string | number;
-    login: string;
+    tid: string;
+    value: string
 }

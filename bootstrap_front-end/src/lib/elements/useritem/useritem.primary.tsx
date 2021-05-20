@@ -5,12 +5,13 @@ import { TextPrimary } from '../text/text.primary';
 import { UserItemPropsType}  from './useritem.type'
 
 export function UserItemPrimary(props : UserItemPropsType) {
-    const {id, login} = props;
-  return (
+    const { value, tid, id} = props;
+
+    return (
     <Container>
         <UserItem>
-          <TextSecondary tid="USER.USER.ID" value={{ID: id}}/>
-          <TextUserItem tid={login}/>
+          <TextSecondary tid={tid} value={id}/>
+          <TextUserItem tid={value}/>
         </UserItem>
     </Container>
   );
