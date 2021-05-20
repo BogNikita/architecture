@@ -8,8 +8,7 @@ import {
 } from '../../main/store/store.service';
 
 const initialState = {
-  userlistStatus: initRequestState(),
-  data: []
+  userItem: initRequestState()
 };
 
 export function userlistStore(state = initialState, action) {
@@ -17,20 +16,19 @@ export function userlistStore(state = initialState, action) {
     case USERLIST_ACTION_TYPE.USERLIST_UPLOAD_PENDING:
       return {
         ...state,
-        userlistStatus: setRequestPending(state.userlistStatus)
+        userItem: setRequestPending(state.userItem)
       };
 
     case USERLIST_ACTION_TYPE.USERLIST_UPLOAD_SUCCESS:
       return {
         ...state,
-        userlistStatus: setRequestSuccess(state.userlistStatus),
-        data: action.data
+        userItem: setRequestSuccess(state.userItem, action.data),
       };
 
     case USERLIST_ACTION_TYPE.USERLIST_UPLOAD_ERROR:
       return {
         ...state,
-        userlistStatus: setRequestError(state.userlistStatus, action.message),
+        userItem: setRequestError(state.userItem, action.message),
       };
 
     default:

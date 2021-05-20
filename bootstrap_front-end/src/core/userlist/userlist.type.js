@@ -1,14 +1,10 @@
 // import { SIGNUP_FORM_FIELD_KEY } from './frame/signup-form/';
 
-// export const SIGNUP_FIELD_NAME = {
-//   LOGIN: 'login',
-//   PASSWORD: 'password',
-// };
+export const USERLIST_KEY = {
+  LOGIN: 'login',
+  ID: 'id',
+};
 
-// export const SIGNUP_FORM_FIELD_NAME = {
-//   [SIGNUP_FORM_FIELD_KEY.LOGIN]: SIGNUP_FIELD_NAME.LOGIN,
-//   [SIGNUP_FORM_FIELD_KEY.PASSWORD]: SIGNUP_FIELD_NAME.PASSWORD,
-// };
 
 export const USERLIST_ACTION_TYPE = {
   USERLIST_UPLOAD_PENDING: 'USERLIST_TYPE.USERLIST_UPLOAD_PENDING',
@@ -17,7 +13,7 @@ export const USERLIST_ACTION_TYPE = {
   USERLIST_UPLOAD_RESET: 'USERLIST_TYPE.USERLIST_UPLOAD_RESET',
 };
 
-// export const SIGNUP_DATA_NAME = {
-//   LOGIN: 'login',
-//   PASSWORD: 'password',
-// };
+export const USERLIST_DATA_NAME = {
+  LOGIN: 'login',
+  ID: 'id',
+};

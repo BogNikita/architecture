@@ -7,9 +7,9 @@ import { THEME_SIZE, THEME_COLOR } from '../../theme';
 
 const Text = styled.span`
   font-size: ${THEME_SIZE.FONT.SMALL};
-  color: ${THEME_COLOR.TEXT.SECONDARY};
+  color: ${THEME_COLOR.TEXT.PRIMARY};
 `;
 
-export function TextSecondary(props: TextSecondaryPropsType) {
+export function TextPrimary(props: TextSecondaryPropsType) {
   return <Text className={props.className}>{text(props.tid, props.value)}</Text>;
 }
