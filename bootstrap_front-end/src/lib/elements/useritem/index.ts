@@ -1,1 +1,1 @@
-export { UserItemPrimary } from './useritem.primary'
+export { ListItemPrimary } from './listitem.primary'

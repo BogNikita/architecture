@@ -1,5 +1,5 @@
 export interface UserItemPropsType {
-    id: string | number;
-    tid: string;
+    title: string | number;
+    titleValue: string;
     value: string
 }
