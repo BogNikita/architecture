@@ -1,4 +1,4 @@
-import { ListItemPrimary } from '../../../../lib/elements/useritem';
+import { ListItemPrimary } from '../../../../lib/elements/listitem';
 import { USERLIST_DATA_NAME } from '../../userlist.type';
 
 export function UserItemComponent({ userItem }) {
